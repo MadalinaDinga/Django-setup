@@ -52,7 +52,7 @@ migrations shipped with the app).
 **python manage.py makemigrations polls** ​→ store changes to the models as a
 migration.
 
-**python manage.py sqlmigrate polls ​ 0001 **​→ take migration names and returns
+**python manage.py sqlmigrate polls** ​ 0001 ​→ take migration names and returns
 their SQL. Doesn’t actually run the migration on your database - it just prints it to the
 screen so that you can see what SQL Django thinks is required. It’s useful for checking
 what Django is going to do or if you have database administrators who require SQL
