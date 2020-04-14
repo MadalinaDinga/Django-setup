@@ -35,39 +35,39 @@ project.
 
 Commands:
 
-django-admin startproject projname ​→ create project
+**django-admin startproject projname** ​→ create project
 Focus on writing code rather than creating directories.
 
-python manage.py runserver (0:​8080) ​→ listen on all available public IPs
+**python manage.py runserver (0:​8080)** ​→ listen on all available public IPs
 
-python manage.py startapp polls ​→ create app
+**python manage.py startapp polls** ​→ create app
 
 Db:
 
-python manage.py migrate​ → create the tables in the database before we can use them
+**python manage.py migrate**​ → create the tables in the database before we can use them
 ( looks at the INSTALLED_APPS setting and creates any necessary database tables
 according to the database settings in your mysite/settings.py file and the database
 migrations shipped with the app).
 
-python manage.py makemigrations polls ​→ store changes to the models as a
+**python manage.py makemigrations polls** ​→ store changes to the models as a
 migration.
 
-python manage.py sqlmigrate polls ​ 0001 ​→ take migration names and returns
+**python manage.py sqlmigrate polls ​ 0001 **​→ take migration names and returns
 their SQL. Doesn’t actually run the migration on your database - it just prints it to the
 screen so that you can see what SQL Django thinks is required. It’s useful for checking
 what Django is going to do or if you have database administrators who require SQL
 scripts for changes.
 
-python manage.py migrate ​→ run the migration on your database. Take all the
+**python manage.py migrate** ​→ run the migration on your database. Take all the
 migrations that haven’t been applied (Django tracks which ones are applied using a
 special table in your database called django_migrations) and runs them against the
 database - essentially, synchronizing the changes to the models with the schema in the
 database.
 
-python manage.py createsuperuser → ​create superuser (username: ict4d,
+**python manage.py createsuperuser** → ​create superuser (username: ict4d,
 pass: kasadaka)
 
-python manage.py test polls​ → running tests
+**python manage.py test polls**​ → running tests
 
 Django test client ​ - Django provides a test Client to simulate a user interacting with the
 code at the view level.
