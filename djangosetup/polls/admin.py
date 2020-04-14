@@ -2,4 +2,11 @@ from django.contrib import admin
 
 from .models import Question
 
-admin.site.register(Question) # tell the admin that Question objects have an admin interface
+# split the form up into fieldsets
+class QuestionAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['question_text']}),
+        ('Date information', {'fields': ['pub_date']}),
+    ]
+
+admin.site.register(Question, QuestionAdmin)
