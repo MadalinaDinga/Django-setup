@@ -4,8 +4,8 @@ from django.db import models
 from django.utils import timezone
 
 
-class Question(models.Model):
-    question_text = models.CharField(max_length=200)
+class Report(models.Model):
+    report_text = models.CharField(max_length=300)
     pub_date = models.DateTimeField('date published')
 
     def was_published_recently(self):
@@ -17,13 +17,13 @@ class Question(models.Model):
     was_published_recently.short_description = 'Published recently?'
 
     def __unicode__(self):
-        return self.question_text
+        return self.report_text
 
 
-class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
+class Comment(models.Model):
+    report = models.ForeignKey(Report, on_delete=models.CASCADE)
+    comment_text = models.CharField(max_length=200)
+    likes = models.IntegerField(default=0)
 
     def __unicode__(self):
-        return self.choice_text
+        return self.comment_text
