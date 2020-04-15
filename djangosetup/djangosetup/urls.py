@@ -6,5 +6,6 @@ from polls import views
 
 urlpatterns = [
     path('polls/', include('polls.urls')),  # allow referencing other URLconfs
+    path('reports/', include('reports.urls')),
     path('admin/', admin.site.urls),
 ]

@@ -7,6 +7,7 @@ from django.utils import timezone
 class Report(models.Model):
     report_text = models.CharField(max_length=300)
     pub_date = models.DateTimeField('date published')
+    report_likes = models.IntegerField(default=0)
 
     def was_published_recently(self):
         now = timezone.now()
@@ -23,7 +24,6 @@ class Report(models.Model):
 class Comment(models.Model):
     report = models.ForeignKey(Report, on_delete=models.CASCADE)
     comment_text = models.CharField(max_length=200)
-    likes = models.IntegerField(default=0)
 
     def __unicode__(self):
         return self.comment_text
