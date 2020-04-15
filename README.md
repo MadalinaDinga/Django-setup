@@ -1,3 +1,10 @@
+# Content:
+
+# Polls App
+
+This is a Django application following the official Django tutorial:
+https://docs.djangoproject.com/en/3.0/intro/tutorial01/
+
 # Reports App
 
 ## List View
@@ -8,9 +15,6 @@
 
 # Django-setup
 This repository contains a Django MVC setup for learning purposes
-
-This is a Django project following the tutorial:
-https://docs.djangoproject.com/en/3.0/intro/tutorial01/
 
 Project Structure:
 manage​.​py
