@@ -1,10 +1,10 @@
 # Reports App
 
 ## List View
-![](images/list.png)
+![](images/list.PNG)
 
 ## Details View
-![](images/details.png)
+![](images/details.PNG)
 
 # Django-setup
 This repository contains a Django MVC setup for learning purposes
